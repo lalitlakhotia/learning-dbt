@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: data_extractor_request_log
+    description: "data extractor request_log"
+    database: postgres
+    schema: public
+
+    tables:
+      - name: request_log
+        description: "request_log contains each request"
+        columns:
+          - name: req_id
+            tests:
+              - unique
+              - not_null
+              
